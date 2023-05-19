@@ -4,12 +4,13 @@ require './app'
 class Main
   def initialize
     @app = App.new
+    @user_selection
   end
 
   puts 'Welcome to School Library App!'
 
   def run
-    loop do
+    while @user_selection != 7
       puts "\n"
       puts 'Please chose an option by entering a number :'
       puts '1 - List all books'
@@ -20,15 +21,15 @@ class Main
       puts '6 - List all rentals for a given person id'
       puts '7 - Exit'
 
+      @user_selection = gets.chomp.to_i
+
       selection
     end
   end
 
   # rubocop:disable Metrics/CyclomaticComplexity
   def selection
-    user_selection = gets.chomp.to_i
-
-    case user_selection
+    case @user_selection
     when 1
       @app.list_books
     when 2
@@ -43,7 +44,8 @@ class Main
       @app.list_rentals
     when 7
       puts 'Thank you for using this app! 😇'
-      nil
+    else
+        puts 'Invalid input'
     end
   end
   # rubocop:enable Metrics/CyclomaticComplexity
