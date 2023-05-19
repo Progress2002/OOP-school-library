@@ -20,7 +20,7 @@ class Main
       puts '6 - List all rentals for a given person id'
       puts '7 - Exit'
 
-      @user_selection = gets.chomp
+      @user_selection = gets.chomp.to_i
       selection
     end
   end
