@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require './app'
 
 class Main
@@ -19,8 +20,7 @@ class Main
       puts '6 - List all rentals for a given person id'
       puts '7 - Exit'
 
-      @user_selection = gets.chomp.to_i
-
+      @user_selection = gets.chomp
       selection
     end
   end
