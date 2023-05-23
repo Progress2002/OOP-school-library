@@ -65,6 +65,7 @@ gem install
 ```
 - To run this project on your local machine `Enter` the below command in your terminal
 ```
+cd classes/
 ruby main.rb
 ```
 
