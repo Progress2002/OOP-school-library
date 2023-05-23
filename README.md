@@ -4,7 +4,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Project Demo](#project-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -39,9 +38,6 @@ Record borrowing activities: The app facilitates the recording of borrowing acti
   <ul>
     <li><a href="https://www.ruby-lang.org/">Ruby</a></li>
   </ul>
-
-## 🚀 Project Demo <a name="project-demo"><a>
-`Project demo will be updated soon!`
 
 ### Key Features <a name="key-features"></a>
 
