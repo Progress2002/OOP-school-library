@@ -1,14 +1,23 @@
+require 'json'
 require './student'
 require './teacher'
 require './book'
 require './person'
 require './rental'
 
+
+# file = File.read('person.json')
+# puts file
+# data = JSON.parse(file)
+# puts data
+
 class App
+  attr_accessor :testarr
   def initialize
     @people = []
     @book = []
     @rentals = []
+    @testarr = []
   end
 
   def list_books
@@ -35,14 +44,21 @@ class App
     print 'Do you want to create a student (1) or a teacher (2)? [input the number]: '
     user_input = gets.chomp.to_i
 
+    file = File.open('person.json', 'w')
+    
+
     case user_input
     when 1
       create_student
+      file.write(JSON.generate(@testarr))
     when 2
       create_teacher
+      # file.write('person.json', JSON.generate(@people), mode: 'a')
     else
       puts 'Invalid input, person not created'
     end
+
+    file.close
   end
 
   def create_student
@@ -52,7 +68,9 @@ class App
     name = gets.chomp
     print 'Has parent permisson? [Y?N]: '
     permisson = gets.chomp.downcase
-    @people << Student.new(age, name, parent_permission: permisson)
+    st = Student.new(age, name, parent_permission: permisson)
+    @testarr.push({name: st.name, age: st.age, ID: st.id})
+    @people << st
     puts 'Student created successfuly!'
   end
 
