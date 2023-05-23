@@ -4,7 +4,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Project Demo](#project-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -40,9 +39,6 @@ Record borrowing activities: The app facilitates the recording of borrowing acti
     <li><a href="https://www.ruby-lang.org/">Ruby</a></li>
   </ul>
 
-## 🚀 Project Demo <a name="project-demo"><a>
-`Project demo will be updated soon!`
-
 ### Key Features <a name="key-features"></a>
 
 - Add new students or teacher
@@ -67,9 +63,10 @@ This repository includes ruby code that can be use to decode the morse code.
 ```
 gem install
 ```
-- To run this project on your local machine `Enter` the below command
+- To run this project on your local machine `Enter` the below command in your terminal
 ```
-ruby database.rb
+cd classes/
+ruby main.rb
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -82,6 +79,11 @@ ruby database.rb
 - Twitter: [@Progress_2002](https://twitter.com/Progress_2002)
 - LinkedIn: [@Progress](https://www.linkedin.com/in/progress-ezeamaka-27b114247)
 - Frontend Mentor - [@Progress2002](https://www.frontendmentor.io/profile/progress2002)
+
+👤  **BB-Simon**
+
+- GitHub: [@githubhandle](https://github.com/BB-Simon) 
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bb-simon/) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
