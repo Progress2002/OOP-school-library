@@ -22,8 +22,7 @@ class Main
 
       @user_selection = gets.chomp.to_i
 
-      selection = UserSelection.new(@user_selection, @app)
-      selection.selection
+      selection(@user_selection, @app)
     end
   end
 end
