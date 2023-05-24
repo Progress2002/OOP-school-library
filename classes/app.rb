@@ -4,20 +4,15 @@ require './teacher'
 require './book'
 require './person'
 require './rental'
+require './store.rb'
 
-
-# file = File.read('person.json')
-# puts file
-# data = JSON.parse(file)
-# puts data
 
 class App
-  attr_accessor :testarr
   def initialize
+    @store = Store.new
     @people = []
     @book = []
     @rentals = []
-    @testarr = []
   end
 
   def list_books
@@ -44,21 +39,14 @@ class App
     print 'Do you want to create a student (1) or a teacher (2)? [input the number]: '
     user_input = gets.chomp.to_i
 
-    file = File.open('person.json', 'w')
-    
-
     case user_input
     when 1
       create_student
-      file.write(JSON.generate(@testarr))
     when 2
       create_teacher
-      # file.write('person.json', JSON.generate(@people), mode: 'a')
     else
       puts 'Invalid input, person not created'
     end
-
-    file.close
   end
 
   def create_student
@@ -68,9 +56,9 @@ class App
     name = gets.chomp
     print 'Has parent permisson? [Y?N]: '
     permisson = gets.chomp.downcase
-    st = Student.new(age, name, parent_permission: permisson)
-    @testarr.push({name: st.name, age: st.age, ID: st.id})
-    @people << st
+    student = Student.new(age, name, parent_permission: permisson)
+    @people << student
+    @store.store_people('person.json', { name: student.name, age: student.age, ID: student.id })
     puts 'Student created successfuly!'
   end
 
@@ -81,7 +69,9 @@ class App
     name = gets.chomp
     print 'specialization: '
     specialization = gets.chomp
-    @people << Teacher.new(age, name, specialization)
+    teacher = Teacher.new(age, name, specialization)
+    @people << teacher
+    @store.store_people('person.json', { name: teacher.name, age: teacher.age, ID: teacher.id })
     puts 'Teacher created successfully!'
   end
 
