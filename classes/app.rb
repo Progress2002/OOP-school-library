@@ -80,7 +80,9 @@ class App
     title = gets.chomp
     print 'Author: '
     author = gets.chomp
-    @book << Book.new(title, author)
+    book = Book.new(title, author)
+    @book << book
+    @store.store_books('books.json', {title: book.title, author: book.author})
     puts 'Book created successfully!'
   end
 
@@ -88,7 +90,7 @@ class App
     if @book.empty?
       puts 'No book record found'
     elsif @people.empty?
-      puts 'No person reord found'
+      puts 'No person record found'
     else
       puts 'Select a book from the following list by number (not ID)'
       @book.each_with_index do |book, index|
@@ -106,8 +108,9 @@ class App
 
       print 'Date: '
       date = gets.chomp
-
-      @rentals << Rental.new(date, @people[person_index], @book[book_index])
+      rental = Rental.new(date, @people[person_index], @book[book_index])
+      @rentals << rental
+      # @store.store_rentals('rentals.json', {date: rental.date, person: rental[1], book: rental[2]})
       puts 'Rental created successfully'
     end
   end

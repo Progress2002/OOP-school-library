@@ -13,4 +13,11 @@ class Store
     @people.push(data)
     @handleData.save_data(file, @people)
   end
+
+  def store_books(file, data)
+    @books = @handleData.read_data(file) if File.exist?(file)
+    @books.push(data)
+    @handleData.save_data(file, @books)
+  end
+  
 end
