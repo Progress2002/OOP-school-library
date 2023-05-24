@@ -110,7 +110,7 @@ class App
       date = gets.chomp
       rental = Rental.new(date, @people[person_index], @book[book_index])
       @rentals << rental
-      # @store.store_rentals('rentals.json', {date: rental.date, person: rental[1], book: rental[2]})
+      @store.store_rentals('rentals.json', {date: rental.date, person: @people[person_index], book: @book[book_index]})
       puts 'Rental created successfully'
     end
   end
