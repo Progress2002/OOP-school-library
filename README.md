@@ -44,6 +44,8 @@ Record borrowing activities: The app facilitates the recording of borrowing acti
 - Add new students or teacher
 - Add new books
 - Record borrowing activities
+- Store books added books in json file
+- Retrive and load data to app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
