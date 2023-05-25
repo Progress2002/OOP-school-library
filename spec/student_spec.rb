@@ -2,7 +2,7 @@ require_relative '../classes/student'
 
 describe Student do
   before :each do
-    @student = Student.new(30, 'Simon', 'true')
+    @student = Student.new(30, 'Simon', parent_permission: 'true')
   end
 
   it 'checking student instance' do

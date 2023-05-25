@@ -2,12 +2,12 @@ require_relative '../classes/rental'
 
 describe Rental do
   before :each do
-    person = double('Person', rentals: [])
+    person = double('Person', rental: [])
     allow(person).to receive(:age) { 12 }
     allow(person).to receive(:name) { 'shubham' }
     allow(person).to receive(:parent_permission) { true }
 
-    book = double('book', rentals: [])
+    book = double('book', rental: [])
     allow(book).to receive(:title) { 'Harry Potter' }
     allow(book).to receive(:author) { 'Shubham' }
 

@@ -1,16 +1,16 @@
 require_relative '../classes/base_decorator'
 
-describe Decorator do
+describe BaseDecorator do
   before :each do
     person = double('Person', rentals: [])
     allow(person).to receive(:age) { 12 }
-    allow(person).to receive(:name) { 'shubham' }
+    allow(person).to receive(:name) { 'Simon' }
     allow(person).to receive(:parent_permission) { true }
     allow(person).to receive(:correct_name).and_return(person.name)
-    @decorator = Decorator.new(person)
+    @decorator = BaseDecorator.new(person)
   end
 
   it 'checking for correct name method should renturn same name' do
-    expect(@decorator.correct_name).to eq('shubham')
+    expect(@decorator.correct_name).to eq('Simon')
   end
 end

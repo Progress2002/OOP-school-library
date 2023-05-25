@@ -2,7 +2,7 @@ require_relative '../classes/teacher'
 
 describe Teacher do
   before :each do
-    @teacher = Teacher.new(30, 'Shubham', 'true')
+    @teacher = Teacher.new(30, 'Simon', 'true')
   end
 
   it 'checking teacher instance' do
@@ -10,6 +10,6 @@ describe Teacher do
   end
 
   it 'can use services' do
-    expect(@teacher.can_use_services?).to be true
+    expect(@teacher.can_use_service?).to be true
   end
 end
