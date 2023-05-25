@@ -1,1 +1,1 @@
-[{"type":"[Student]","name":"Sam","age":20,"parent_permission":"y","id":892},{"type":"[Student]","name":"Ben","age":15,"parent_permission":"n","id":500},{"type":"[Teacher]","name":"Ella","age":28,"id":660}]
+[{"type":"Student","name":"Sem","age":12,"parent_permission":"n"},{"type":"Teacher","name":"Pop","age":32,"specialization":"Y"},{"type":"Student","name":"Tomy","age":23,"parent_permission":"y"},{"type":"Teacher","name":"Jam","age":43,"specialization":"Math"}]
