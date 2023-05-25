@@ -1,4 +1,4 @@
-require_relative '../classes/teacher.rb'
+require_relative '../classes/teacher'
 
 describe Teacher do
   before :each do

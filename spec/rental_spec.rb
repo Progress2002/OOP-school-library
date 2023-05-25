@@ -1,4 +1,4 @@
-require_relative '../classes/rental.rb'
+require_relative '../classes/rental'
 
 describe Rental do
   before :each do

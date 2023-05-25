@@ -1,4 +1,4 @@
-require_relative '../classes/capitalize_decorator.rb'
+require_relative '../classes/capitalize_decorator'
 
 describe TrimmerDecorator do
   before :each do

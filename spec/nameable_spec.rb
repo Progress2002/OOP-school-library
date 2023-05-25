@@ -1,4 +1,4 @@
-require_relative '../classes/nameable.rb'
+require_relative '../classes/nameable'
 
 describe Nameable do
   before :each do
