@@ -2,8 +2,7 @@ require 'json'
 
 class HandleData
   def read_data(filename)
-    file = File.read(filename)
-    JSON.parse(file)
+    File.empty?(filename) ? [] :  JSON.parse(File.read(filename))
   end
 
   def save_data(filename, data)
